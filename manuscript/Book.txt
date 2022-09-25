@@ -1,2 +1,5 @@
-chapter1.txt
-chapter2.txt
+preface-ed2.md
+preface-ed1.md
+week-1.md
+week-2.md
+week-3.md

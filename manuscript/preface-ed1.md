@@ -1,8 +1,8 @@
 # Preface (1st edition)
 
-In November 2014, I organised a 3-week workshop at the Thoughtworks Xi'an office called _3 Pages in 3 Weeks_. Participants were asked to implement a web page using HTML/CSS in each session.
+In November 2014, I organised a 3-week workshop at the Thoughtworks Xi'an office called *3 Pages in 3 Weeks*. Participants were asked to implement a web page using HTML/CSS in each session.
 
-The workshop was a bit like a drawing class, where everyone worked from a mockup (usually from a professional designer) like a landing page or product detail page and implemented it in HTML/CSS.
+The workshop was a bit like a drawinging class, where everyone worked from a mockup (usually from a professional designer) like a landing page or product detail page and implemented it in HTML/CSS.
 
 The participants were mixed with front-end developers, back-end developers, test engineers, UX designers, business analysts and recruiters. Most participants have had some prior exposure to CSS, but not to the point of proficiency; a small number of participants have no experience to web design/development at all, and the rest of them are specialised in web design/development.
 
@@ -14,22 +14,22 @@ One day after the workshop, I realised that this might be a good topic that coul
 
 ## Some updates
 
-_3 Pages in 3 Weeks_ has received a surprising amount of support since it was posted on GitBook, from both my colleagues and the community. A lot of my colleagues at Thoughtworks have helped me to actively promote the book after its release, which has resulted in the book getting more attention, and I would like to thank them for that as well.
+*3 Pages in 3 Weeks* has received a surprising amount of support since it was posted on GitBook, from both my colleagues and the community. A lot of my colleagues at Thoughtworks have helped me to actively promote the book after its release, which has resulted in the book getting more attention, and I would like to thank them for that as well.
 
 March 2015 in Shenzhen
 
-* * *
+- - 
 
-## Some testimonials about the first edition of the book
+## Some praise about the first edition of the book
 
-"I found out about your blog through the Three Weeks Three page in ThoughtWorks WeChat Channel, and it was very insightful to read it. The way you think about the issues and the way you explain them is fascinating and enjoyable to read, thanks." -- **Hongjiang Zhang**
+"I found out about your blog through the Three Weeks Three page in ThoughtWorks WeChat, and it was very insightful to read it. The way you think about the issues and the way you explain them is fascinating and enjoyable to read, thanks." -- **Hongjiang Zhang**
 
 "Mr Qiu: Hi, I was surprised to see the 3 weeks 3 pages project on your podcast by chance, and I have been looking for such a tutorial." -- **Mor1999**
 
-"...I just came here after seeing your book and learned a lot from your book, thanks : )" -- **Dai Zhi Lian**
+"I just came here after seeing your book and learned a lot from your book, thanks : )" -- **Dai Zhi Lian**
 
-"...I purchased your 3 weeks 3 pages and have benefited a lot..." -- **Douche**
+"Hi blogger, I purchased your 3 weeks 3 pages and have benefited a lot..." -- **Douche**
 
-"...I have received (gained) a lot from reading your 3 weeks 3 pages..." -- **tkin**
+"Hi blogger, I have received (gained) a lot from reading your 3 weeks 3 pages." -- **tkin**
 
-"...I downloaded the book from gitbook and paid for another one from selfstore..." -- **Evoque**
+"Hi, downloaded the book from gitbook and paid for another one from selfstore..." -- **Evoque**

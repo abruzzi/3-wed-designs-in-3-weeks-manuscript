@@ -64,22 +64,20 @@ This section will introduce you to HTML and CSS in the simplest way possible. If
 
 All the different pages you see in your browser every day, whether a KFC order page or a news portal, a Douban book review or a Wikipedia page, a personal blog or a document editor, are based on HTML -- the Hyper Text Markup Language. Today HTML is used on the web far beyond what it was originally designed for, but understanding and mastering it is essential for you to implement any complex page.
 
-However, what is described in HTML is only a part of the story: it's for the content part only. If you want your pages to be visually appealing, then a technique to be able to customise styles of the content is needed: CSS - Cascading Style Sheets.
+However, what is described in HTML is only a part of the story: it's for the content part only. If you want your pages to be visually appealing, then a technique to be able to customise styles of the content is needed: CSS - Cascading Style Sheets. 
 
 With CSS, we can use selectors to find one element or a class of HTML elements and apply styles to them. Here the style can be visual elements such as background colours, font colours, borders, shadows, and logical layouts such as inner spacing (called padding)and outer spacing (called margin).
 
-In short, we describe the content through HTML and change the style through CSS. HTML describes an unpolished house, while CSS corresponds to finishes (yes, it is sometimes possible to knock out **non-load bearing walls** to change the layout of the interior of the house).
+In short, we describe the content through HTML and change the style through CSS. HTML describes an unpolished house, while CSS corresponds to finishes (yes, it is sometimes possible to knock out **non-load bearing walls** to change the layout of the interior of the house). 
 
 We can discuss the relationship between the two with a small example below.
 
 ```html
-<div class="container">
-  <h1>HTML and CSS are awesome</h1>
-  <p>
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At eum eius sequi
-    dolor consectetur omnis quia necessitatibus beatae vero numquam.
-  </p>
-</div>
+  <div class="container">
+    <h1>HTML and CSS are awesome</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At eum eius sequi dolor consectetur omnis quia
+      necessitatibus beatae vero numquam.</p>
+  </div>
 ```
 
 Inside a `div` (short for `divider`, an invisible container for other elements), we defined an `h1` (meaning heading level 1) tag and then a `p` tag (meaning paragraph).
@@ -94,7 +92,7 @@ And if we define some CSS to modify the style:
 .container {
   max-width: 800px;
   margin: 0 auto;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 h1 {
@@ -118,7 +116,7 @@ Don't worry if you don't understand everything at the moment, I'll have you cove
 .container {
   max-width: 800px;
   margin: 0 auto;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 h1 {
@@ -154,7 +152,7 @@ I could list many similar trivialities, but to keep you from getting bored, let'
 
 ## Task of our project
 
-Whether you're just starting to write your very first page or already experienced, the first step should be to think about the content of the page and decompose the mockup into small pieces. Generally speaking, we can disassemble the page into multiple modules in a top-to-bottom order, gradually describe each module with HTML, and finally add styles with CSS.
+Whether you're just starting to write your very first page or already experienced, the first step should be to think about the content of the page and decompose the mockup into small pieces. Generally speaking, we can disassemble the page into multiple modules in a top-to-bottom order, gradually describe each module with HTML, and finally add styles with CSS. 
 
 You can either write all the HTML at once or implement one module, add styles to it, and move on to the next one. Here, we'll implement the first page in small chunks at a time to prevent learning too much at once.
 
@@ -169,16 +167,16 @@ In `index.html` we need to set some basic HTML code, aka boilerplate HTML:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Week 1</title>
-  </head>
-  <body>
+</head>
+<body>
     <!-- our code goes here -->
-  </body>
+</body>
 </html>
 ```
 
@@ -192,7 +190,7 @@ Now uou can start the Live Server in Code (by clicking the Go Live button on the
 
 ### Implement the navigation bar
 
-Let's start with the HTML of navigation bar. `HTML` is a very loose, inclusive language compared to other programming languages. Looseness means that there are many different ways to implement a component. For example, you can use `div` to represent a logical container on the page, and you can also use `article` or `section` to achieve the same purpose.
+Let's start with the HTML of navigation bar. `HTML` is a very loose, inclusive language compared to other programming languages. Looseness means that there are many different ways to implement a component. For example, you can use `div` to represent a logical container on the page, and you can also use `article` or `section` to achieve the same purpose. 
 
 In practice, however, we need to use semantic tags, such as `h1`-`h7` for titles, `p` for paragraphs, and `article` to hold a relatively independent item and so on.
 
@@ -203,7 +201,9 @@ For the navigation bar, HTML has a `nav` tag available, and for the list content
   <nav>
     <ul class="nav-list">
       <li class="list-item">
-        <div class="logo"><span class="highlight">Game</span>Insider</div>
+        <div class="logo">
+          <span class="highlight">Game</span>Insider
+        </div>
       </li>
       <li class="list-item">
         <a href="#">News</a>
@@ -242,7 +242,7 @@ By default, browsers add a bullets to all `li`s, as well as some spacing to `ul`
 
 body {
   font-size: 16px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 li {
@@ -252,7 +252,7 @@ li {
 
 ![Reset Default Styles](week-1/after-reset.png)
 
-Here, `*` is a special selector, which means to select all HTML elements on the page. And for all these selected elements, we apply two rules, `margin:0` to eliminate the outer space, that is, no outer padding; `padding:0` means eliminate padding, that is, there is no space between the element content and the border.
+Here, `*` is a special selector, which means to select all HTML elements on the page. And for all these selected elements, we apply two rules, `margin:0` to eliminate the outer space, that is, no outer padding; `padding:0` means eliminate padding, that is, there is no space between the element content and the border. 
 
 Similarly, we use the tag type `body` to select the main content area, set the font size to 16 pixels, and use the font `Open Sans` (if `Open Sans` is unavailable, the system default sans-serif font sans-serif is used) .
 
@@ -358,7 +358,7 @@ In this way, the logo looks the same as the mockup.
 
 ![Button](week-1/button.png)
 
-But if you look closely at the button, it doesn't align with other elements (like the red line in the image above). Alignment is another extremely important principle in design (we'll cover that in chapter three), and our brains prefer neat arrangements over disorder. In fact, horizontally aligning elements inside a container has historically been super difficult, but this problem is easily solved using `flex` layout.
+But if you look closely at the button, it doesn't align with other elements (like the red line in the image above). Alignment is another extremely important principle in design (we'll cover that in chapter three), and our brains prefer neat arrangements over disorder. In fact, horizontally aligning elements inside a container has historically been super difficult, but this problem is easily solved using `flex` layout. 
 
 On a `flex` container, just use `align-items`, and set it as `center`:
 
@@ -399,23 +399,20 @@ As mentioned above, let's write the HTML content first. It is worth noting that 
 <section class="hero-section">
   <section class="brief">
     <h1>Frozen Adventure</h1>
-    <p>
-      Destiny 2 new season will feature a new ice-covered location and a new
-      dark subclass Stasis
-    </p>
+    <p>Destiny 2 new season will feature a new ice-covered location and a new dark subclass Stasis</p>
     <button class="button-secondary">Read more</button>
   </section>
 
   <section class="media">
     <div class="game-cover">
-      <img src="assets/hero.jpeg" alt="destiny 2" />
+      <img src="assets/hero.jpeg" alt="destiny 2">
       <p class="title">Desitny 2 beyond light<span class="rating">4.5</span></p>
     </div>
   </section>
 </section>
 ```
 
-Here you can use either a `div` or `section` as the container tag of the section. I usually prefer `section` as a container for content, and `div` as an auxiliary tag.
+Here you can use either a `div` or `section` as the container tag of the section. I usually prefer `section` as a container for content, and `div` as an auxiliary tag. 
 
 Also, don't use `div` unless necessary. Usually, though, the two are used interchangeably in many cases.
 
@@ -434,14 +431,14 @@ To make the two `block-level` elements `brief` and `media` line up horizontally,
 }
 ```
 
-Well, the horizontal arrangement is fine, but the width of the two parts seems to be uneven. The image part occupies more space, and the text is pushed to the left. We need them be half and half distributed:
+Well, the horizontal arrangement is fine, but the width of the two parts seems to be uneven. The image part occupies more space, and the text is pushed to the left. We  need them be half and half distributed:
 
 ![Flex Initial Attemp](week-1/hero-flex-init.png)
 
 At this time, we need to use the `flex:1` rule for both elements in the container and set the width of `100%` for the image instead of the default width so that the image will fill the available width of its container (the `.game-cover`):
 
 ```css
-.hero-section > section {
+.hero-section>section {
   flex: 1;
 }
 
@@ -488,8 +485,7 @@ In the beginning, we set `container` as a flex container, and their child nodes 
   gap: 1rem;
 }
 
-.box {
-}
+.box {}
 ```
 
 This is because by default the CSS for flex elements is set to `flex:0`, i.e.:
@@ -513,6 +509,7 @@ We set the `flex-grow` of all divs with `box` class to 1, which means they have 
 At this point, they will fill the entire container and share the space evenly:
 
 ![Distributed Evenly](week-1/flex-demo-flex-1.png)
+
 
 If we set different growth factor for some elements:
 
@@ -580,7 +577,7 @@ For customising the button and the navigation bar, we used the colour picker to 
   padding: 8px 16px;
   border-radius: 16px;
   border: none;
-  background-color: #4a43eb;
+  background-color: #4A43EB;
   color: white;
 }
 ```
@@ -589,11 +586,11 @@ We use `appearance: none` here to reset the browser's default style and then add
 
 ![Left Side of Hero Area](week-1/hero-left-side.png)
 
-For the right side of the banner, we noticed that rating content overlaid on the image in the mockup. This effect of **cascading** of content requires a little explanation.
+For the right side of the banner, we noticed that rating content overlaid on the image in the mockup. This effect of **cascading** of content requires a little explanation. 
 
 When the browser renders HTML, it arranges the elements in order, and there is no overlay (after all, overlay means occlusion, that is, some content cannot be seen). If we need some elements to **to jump out** of the arrangement process and free up the position that originally belonged to it, then we need to set the element's `position` to `absolute`.
 
-This way, the element jumps out of the normal document flow and leaves the positioning to the developer. At this time, we can use `top`, `left`, `bottom` and `right` to control the absolute positioning of the element, the default coordinate origin of the upper left corner of the screen.
+This way, the element jumps out of the normal document flow and leaves the positioning to the developer. At this time, we can use `top`, `left`, `bottom` and `right` to control the absolute positioning of the element, the default coordinate origin of the upper left corner of the screen. 
 
 But most of the time, we don't want to take the upper left corner of the screen as the origin but a certain element. In CSS, we can set the `position` of an element to `relative` so that its child nodes will have their origin at the top left corner (instead of the screen top left corner).
 
@@ -635,7 +632,7 @@ Congratulations, we have completed the second major part of the page. Here we le
 
 ### Recent News
 
-Next comes the last section of the page: the news list. What is the first step, again? That's right, write the HTML. When writing HTML, we can roughly analyse which elements need to be marked with `class`. You don't need to be perfect at this stage.
+Next comes the last section of the page: the news list. What is the first step, again? That's right, write the HTML. When writing HTML, we can roughly analyse which elements need to be marked with `class`. You don't need to be perfect at this stage. 
 
 Because when using CSS selectors later, if we find some elements that need special attention, we can always go back and add them on the tag.
 
@@ -648,12 +645,9 @@ The news list is relatively straightforward, consisting of a title and four arti
     <li class="news">
       <article>
         <header>
-          <img src="assets/news-1.webpx" alt="news" />
+          <img src="assets/news-1.webpx" alt="news">
         </header>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sit
-          cupiditate nostrum dolorum rem?
-        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sit cupiditate nostrum dolorum rem?</p>
       </article>
     </li>
     //...other items
@@ -704,7 +698,7 @@ The picture scales correctly now:
 
 ![Resizing image](week-1/news-images-resized.png)
 
-In addition, we noticed that the font was too thick and larger than in the mockup, also the spacing between the title and the image was too close.
+In addition, we noticed that the font was too thick and larger than in the mockup, also the spacing between the title and the image was too close. 
 
 Let's fix it up:
 

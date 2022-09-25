@@ -6,7 +6,7 @@ Responsive design is common in today’s websites, and people tend to browse the
 
 ![Design By Wildan](week-3/mockup.png)
 
-We will use a mobile-first approach here, that is, first consider how to layout on a smaller screen, and increase the screen size gradually into a wider screen. There will be some layout changes during the process. [Kevin Powell](https://www.kevinpowell.co/) once introduced a practical mobile-first strategy in his video. If you haven't seen it, it is highly recommended that you learn and use that strategy.
+We will use a mobile-first approach here, that is, first consider how to layout on a smaller screen, and  increase the screen size gradually into a wider screen. There will be some layout changes during the process. [Kevin Powell](https://www.kevinpowell.co/) once introduced a practical mobile-first strategy in his video. If you haven't seen it, it is highly recommended that you learn and use that strategy.
 
 Without further ado let's get started.
 
@@ -21,7 +21,9 @@ Just as what we have done in the previous two weeks, we can start with the navig
   <nav>
     <ul class="nav-list">
       <li>
-        <span class="material-symbols-outlined"> browse_gallery </span>
+        <span class="material-symbols-outlined">
+        browse_gallery
+        </span>
       </li>
       <li>Stella Studio</li>
       <li class="menu-item"><a href="#">Home</a></li>
@@ -30,7 +32,9 @@ Just as what we have done in the previous two weeks, we can start with the navig
       <li class="menu-item"><a href="#">Price</a></li>
       <li>
         <div class="menu">
-          <span class="material-symbols-outlined"> menu </span>
+          <span class="material-symbols-outlined">
+            menu
+          </span>
         </div>
       </li>
     </ul>
@@ -78,7 +82,7 @@ Note that the parentheses `(li>a[href="#"])` have higher priority here, it will 
 
 ### Simulate Mobile Device in Chrome
 
-Well, that concludes the introduction to `Emmet`, here is a [cheat sheet](https://docs.emmet.io/cheat-sheet/) you may want to print out and post on your desk. Now we can continue on the page.
+Well, that concludes the introduction to `Emmet`, here is a [cheat sheet](https://docs.emmet.io/cheat-sheet/) you may want to print out and post on your desk. Now we can continue on the page. 
 
 To simulate a mobile device, we can enable the browser DevTool emulator:
 
@@ -93,7 +97,7 @@ Let's start by doing some resets in CSS, like removing the default `margin` and 
 There are two ways to use an external font, we can use `@import` to import the font in the CSS file:
 
 ```css
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 * {
   margin: 0;
@@ -101,7 +105,7 @@ There are two ways to use an external font, we can use `@import` to import the f
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 li {
@@ -188,7 +192,7 @@ button {
   border: none;
   padding: 1rem 2rem;
   text-transform: capitalize;
-  font-weight: 700;
+  font-weight: 700;;
 }
 
 .button-primary {
@@ -197,14 +201,14 @@ button {
 }
 
 .button-secondary {
-  background-color: #e0e6e6;
-  color: black;
+  background-color: #E0E6E6;
+  color:black;
 }
 ```
 
 ### CSS Variables
 
-I need to pause again for a little while and see how to get rid of hardcoding like `#192026` and `#E0E6E6`. You must have noticed in the past two weeks that there are many color values ​​that will continue to appear in our CSS.
+I need to pause again for a little while and see how to get rid of hardcoding like `#192026` and `#E0E6E6`. You must have noticed in the past two weeks that there are many color values ​​that will continue to appear in our CSS. 
 
 In design, this repeatation is critical for brand coherence, and a company often has some dedicated color combinations, such as Coca-Cola's red, IKEA's blue-yellow, and so on.
 
@@ -215,7 +219,7 @@ CSS variables are usually defined at the root of a document, it starts with doub
 ```css
 :root {
   --color-primary: #192026;
-  --color-secondary: #e0e6e6;
+  --color-secondary: #E0E6E6;
 }
 ```
 
@@ -229,7 +233,7 @@ When using, simply put the variable name in a `var()`:
 
 .button-secondary {
   background-color: var(--color-secondary);
-  color: black;
+  color:black;
 }
 ```
 
@@ -269,7 +273,7 @@ Next is a more complex area, which is very different between the mobile and desk
   <article class="author">
     <div class="info">
       <div class="avatar">
-        <img src="assets/founder.png" alt="founder" />
+        <img src="assets/founder.png" alt="founder">
       </div>
       <div>
         <h4>Juntao Qiu</h4>
@@ -277,7 +281,7 @@ Next is a more complex area, which is very different between the mobile and desk
       </div>
     </div>
     <div class="image-container">
-      <img src="assets/sprial.jpg" alt="sparel growth" />
+      <img src="assets/sprial.jpg" alt="sparel growth">
     </div>
   </article>
 </div>
@@ -362,7 +366,7 @@ This gives the layout of the article section on the mobile:
 
 ## Desktop version
 
-At this time, if we open this page with a desktop browser, we will find that the page is more or less usable (except for the disappearing menu), we can click buttons, read article, etc. In general, it is an at least functional.
+At this time, if we open this page with a desktop browser, we will find that the page is more or less usable (except for the disappearing menu), we can click buttons, read article, etc. In general, it is an at least functional. 
 
 And that's why we emphasize mobile first. If it's the other way around, a lot of times on mobile devices there will be a lot of scroll bars and sometimes the font size is either too large or too small to read.
 
@@ -491,7 +495,7 @@ When we talk about a good design, it should have at least the following characte
 1. Simple, there is no extra thinking required
 1. Beautiful and pleasant to use
 
-In fact, the best design is to make the user not feel the existence of the design itself, that is, the interface of human-computer interaction is integrated into the daily habits.
+In fact, the best design is to make the user not feel the existence of the design itself, that is, the interface of human-computer interaction is integrated into the daily habits. 
 
 Many times, users can only realize the existence of a certain design when it is bad: for example, you searched the whole page but could't find the button to resend the email; after entering a deep level, you found that you could't go back; mouse hover links that didn't have a visual hint of clicable and so on.
 
@@ -537,7 +541,7 @@ We can actually easily determine which text belongs to the first item and which 
 
 ![Proximity](week-3/proximity.png)
 
-This principle is very important, and we will use it a lot in our own designs. For example, the size of the space between a large piece of information and another, the size of the space between the title and the text, the distance between the picture and its description text, and so on.
+This principle is very important, and we will use it a lot in our own designs. For example, the size of the space between a large piece of information and another, the size of the space between the title and the text, the distance between the picture and its description text, and so on. 
 
 Using the principle of proximity can save readers a lot of time, which in turn makes our designs more meaningful (and intuitive). Imagine this scenario: You are browsing a long list on your phone, each item in the list contains an image and corresponding description text, and you have now browsed to the 7th, but since all the spacing is the same, you can't tell whether the description text you see now is a description of the previous image or the next one.
 
@@ -545,7 +549,7 @@ Using the principle of proximity can save readers a lot of time, which in turn m
 
 Repetition, that is, using a pattern over and over again. In the design, there are many places where repetition is used, such as the highlight color of a site, the style of buttons/links. There is a lot of repetition on the same page, and within a whole web site.
 
-The above example also includes the principle of repetition, such as the three `UNIX` philosophies listed separately, each entry contains a large number, then a main title and a subtitle, and the font of the main title and subtitle is different.
+The above example also includes the principle of repetition, such as the three `UNIX` philosophies listed separately, each entry contains a large number, then a main title and a subtitle, and the font of the main title and subtitle is different. 
 
 This repetition creates a rhythm that is not surprising at any point when someone read the design. Even if when on their first visit, after learning or understanding the first pattern, what follows is nothing more than the repetition of the first pattern.
 
@@ -597,13 +601,13 @@ Next, I hope you can use what you've learned to do some fun exercises.
 
 ### Challenge 1
 
-You've written a lot of HTML and CSS in the first two chapters, and there are a lot of duplications in them. I hope you can use CSS variables to eliminate duplication of color, layout, etc. in your code. Also, if you need to write new HTML snippets, try `Emmet` to generate HTML instead of do it manually.
+You've written a lot of HTML and CSS in the first two chapters, and there are a lot of duplications in them. I hope you can use CSS variables to eliminate duplication of color, layout, etc. in your code. Also, if you need to write new HTML snippets, try `Emmet` to generate HTML instead of do it manually. 
 
 Also, our designs in the first two chapters are based on the desktop. You can try using `media query` to hide certain elements on mobile devices, or change the layout of certain elements to make them more convenient on mobile devices.
 
 ### Challenge 2 and the Final one
 
-With design principles in mind, try to design something you are interested in. Your hobby can be a good start, hiking, movie, books or cooking, and you name it. Once you have picked the theme, try doing some research and develop a design - timeline, card, hero area, news list or whatever you like. If you're stuck, try dribbble or behance for some inspiration.
+With design principles in mind, try to design something you are interested in. Your hobby can be a good start, hiking, movie, books or cooking, and you name it. Once you have picked the theme, try doing some research and develop a design - timeline, card, hero area, news list or whatever you like. If you're stuck, try dribbble or behance for some inspiration.  
 
 And the most beautiful part comes, you will need to use HTML and CSS to implement the design, publish it on `Surge` or `Netlify`, and share it with me maybe?
 
@@ -611,6 +615,6 @@ Unless you're very lucky, you're bound to encounter a lot of difficulties, but d
 
 ## What's next?
 
-You have learned the basic development process and development methods, if you encounter new unfamiliar CSS properties or new HTML tags, you can visit [MDN](https://developer.mozilla.org/en-US /) to find the latest and most detailed guidance and explanations.
+You have learned the basic development process and development methods, if you encounter new unfamiliar CSS properties or new HTML tags, you can visit [MDN](https://developer.mozilla.org/en-US /) to find the latest and most detailed guidance and explanations. 
 
 If you are not sure about the level of support of some new properties, you can confirm their coverage on [caniuse](https://caniuse.com/).

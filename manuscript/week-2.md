@@ -12,9 +12,15 @@ As before, the first step is to deconstruct the page. The navigation bar for thi
 
 ```html
 <div class="main">
-  <header class="nav-container">header</header>
-  <section class="posts-container">post list</section>
-  <aside class="profile-container">profile</aside>
+  <header class="nav-container">
+    header
+  </header>
+  <section class="posts-container">
+    post list
+  </section>
+  <aside class="profile-container">
+    profile
+  </aside>
 </div>
 ```
 
@@ -83,8 +89,7 @@ Similar to the process in the first week, let's implement the navigation bar fir
 Here we temporarily use text to replace the icon, and then do the replacement after the typesetting is completed.
 
 ```css
-nav,
-.nav-list {
+nav, .nav-list {
   height: 100%;
 }
 
@@ -115,17 +120,13 @@ Download the required files to the `assets` subdirectory in the current director
 ```html
 <nav>
   <ul class="nav-list">
-    <li>
-      <a href="#">
-        <img src="assets/home.svg" alt="home" />
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <img src="assets/chat.svg" alt="chat" />
-      </a>
-    </li>
-    <!-- other items -->
+    <li><a href="#">
+        <img src="assets/home.svg" alt="home">
+      </a></li>
+    <li><a href="#">
+        <img src="assets/chat.svg" alt="chat">
+      </a></li>
+  <!-- other items -->
   </ul>
 </nav>
 ```
@@ -165,16 +166,15 @@ If we want to change the color of the svg image, we have to use the image editor
 Also on the Google Fonts site, we can import the font files corresponding to Material Symbols at the top of the HTML file:
 
 ```html
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 ```
 
 Then use a `span` to replace the previous `img` element, note that the text in the span needs to correspond to the name of the icon:
 
 ```html
-<span class="material-symbols-outlined"> favorite </span>
+<span class="material-symbols-outlined">
+favorite
+</span>
 ```
 
 Replace all icons with `span`:
@@ -183,9 +183,10 @@ Replace all icons with `span`:
 <header class="nav-container">
   <nav>
     <ul class="nav-list">
-      <li>
-        <a href="#">
-          <span class="material-symbols-outlined"> home </span>
+      <li><a href="#">
+          <span class="material-symbols-outlined">
+            home
+          </span>
         </a>
       </li>
       <!-- the other icons -->
@@ -203,15 +204,15 @@ li a {
 }
 
 li:nth-child(1) a {
-  color: #e6254a;
+  color: #E6254A;
 }
 
 li:nth-child(2) a {
-  color: #25ccf1;
+  color: #25CCF1;
 }
 
 li:nth-child(3) a {
-  color: #eec310;
+  color: #EEC310;
 }
 
 /* other icons */
@@ -235,7 +236,7 @@ Aside from not using actual icons, our navbar layout is pretty close to the mock
         </li>
         <li>
           <a href="#">
-            <input type="text" placeholder="Search" />
+            <input type="text" placeholder="Search">
           </a>
         </li>
       </ul>
@@ -258,13 +259,13 @@ Note that here we use the `input` tag to define the input box. If the input box 
 }
 ```
 
-Here we use `justify-content: space-between` to align the logo and the search box, and since the height of the search box and the logo may be different, we also use `align-items: center` to ensure that they are centered horizontally.
+Here we use `justify-content: space-between` to align the logo and the search box, and since the height of the search box and the logo may be different, we also use `align-items: center` to ensure that they are centered horizontally. 
 
 For the details, we need to replace the default serif font with a new sans serif font, and then add rounded corners and a background color to the search box:
 
 ```css
 body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .top-nav-list a {
@@ -274,7 +275,7 @@ body {
 .top-nav-list input {
   appearance: none;
   border: none;
-  background-color: #f6f9fe;
+  background-color: #F6F9FE;
   padding: 0.4rem;
   border-radius: 0.2rem;
 }
@@ -448,11 +449,17 @@ Excellent! With these basics in place, we can move on to the implementation of t
 <section class="posts-container">
   <!-- header -->
   <section class="cards-container">
-    <div class="card small">Card 1</div>
+    <div class="card small">
+      Card 1
+    </div>
 
-    <div class="card large">Card 2</div>
+    <div class="card large">
+      Card 2
+    </div>
 
-    <div class="card medium">Card 3</div>
+    <div class="card medium">
+      Card 3
+    </div>
     <!-- other cards -->
   </section>
 </section>
@@ -502,14 +509,16 @@ First, let's implement the header of the card:
 <article class="card small">
   <header class="flex basic-info">
     <div class="avatar">
-      <img src="assets/juntao.avatar.png" alt="avatar" />
+      <img src="assets/juntao.avatar.png" alt="avatar">
     </div>
     <div class="brief">
       <h4>Juntao Qiu</h4>
       <p>Web developer</p>
     </div>
     <div class="menu">
-      <span class="material-symbols-outlined"> more_vert </span>
+      <span class="material-symbols-outlined">
+        more_vert
+      </span>
     </div>
   </header>
 </article>
@@ -547,7 +556,7 @@ Then use the `flex` layout for the avatar and menu sections, which we already kn
   margin-left: auto;
   width: 1.2rem;
   height: 1.2rem;
-  color: #c3d0e0;
+  color: #C3D0E0;
   cursor: pointer;
 }
 ```
@@ -562,7 +571,7 @@ Next is the image/video part. It should be noted here that different media may h
 <article class="card small">
   <!-- header -->
   <section class="media">
-    <img src="assets/boats.JPG" alt="boats in Brighton pier" />
+    <img src="assets/boats.JPG" alt="boats in Brighton pier">
   </section>
 </article>
 ```
@@ -594,13 +603,21 @@ Next is the `control` area, there are some icons with states. When the user clic
 
 ```html
 <div class="flex controls">
-  <span class="material-symbols-outlined active"> favorite </span>
+  <span class="material-symbols-outlined active">
+    favorite
+  </span>
 
-  <span class="material-symbols-outlined"> chat_bubble </span>
+  <span class="material-symbols-outlined">
+    chat_bubble
+  </span>
 
-  <span class="material-symbols-outlined"> movie </span>
+  <span class="material-symbols-outlined">
+    movie
+  </span>
 
-  <span class="material-symbols-outlined"> bookmarks </span>
+  <span class="material-symbols-outlined">
+    bookmarks
+  </span>
 </div>
 ```
 
@@ -613,7 +630,7 @@ Note that here we have added two CSS classes for the first `span`: `material-sym
 
 .controls span {
   font-size: 1.2rem;
-  color: #c3d0e0;
+  color: #C3D0E0;
 }
 
 .controls span:last-child {
@@ -621,7 +638,7 @@ Note that here we have added two CSS classes for the first `span`: `material-sym
 }
 
 span.active {
-  color: #e6254a;
+  color: #E6254A;
 }
 ```
 
@@ -698,7 +715,7 @@ Adding a shadow is pretty simple, just specify the `box-shadow` property, the sy
 box-shadow: <h-offset> <v-offset> <blur> <spread> <color>;
 ```
 
-They are: horizontal offset, vertical offset, blur radius, spread radius and shadow color. You can understand these parameters like this: imagine that the page element is a real card (such as a playing card), and then imagine that there is a light source shining directly above the card. And there will be a projection directly below it, a shadow. If the light source moves horizontally to the left, the shadow under the card will move to the right, which is the horizontal offset, and the same is true for the vertical offset.
+They are: horizontal offset, vertical offset, blur radius, spread radius and shadow color. You can understand these parameters like this: imagine that the page element is a real card (such as a playing card), and then imagine that there is a light source shining directly above the card. And there will be a projection directly below it, a shadow. If the light source moves horizontally to the left, the shadow under the card will move to the right, which is the horizontal offset, and the same is true for the vertical offset. 
 
 When the light source is far away from the card, the light will diffract and create a blurry shadow, which is the spread radius.
 
@@ -711,6 +728,7 @@ For example, we can set the shadow of the card as:
 ```
 
 Meaning, we assume the light source is coming in from the top left corner, the shadow will be offset 4 pixels to the right and down from the card's position, the blur radius will be 16 pixels, and the color will be `#efefef`.
+
 
 ![Box Shadow](week-2/box-shadow.png)
 
